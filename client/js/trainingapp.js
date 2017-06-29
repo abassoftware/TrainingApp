@@ -5,7 +5,6 @@
 angular.module("trainingApp", ["aba", "aba-chart", "aba-log", "aba-translation", "aba-table", "aba-customer", "aba-pagination"]);
 angular.module("trainingApp").controller("trainingAppCtrl", ["$scope", "$log", "$http", "$location", "abaContext", "abaAlerts", "abaOpenGuiInterface", "customerInterface",
     function ($scope, $log, $http, $location, abaContext, abaAlerts, abaOpenGuiInterface, customerInterface) {
-        var link = 'script/public/abas.training.TrainingApp/de.abas.training.TrainingApp.ws.table';
         $scope.data = {
             options: {},
             data: []
@@ -19,4 +18,7 @@ angular.module("trainingApp").controller("trainingAppCtrl", ["$scope", "$log", "
                     })
             }
         });
+
+        // Sample Chart
+		$scope.sampleChart = abaContext.getScriptLink() + 'de.abas.training.TrainingApp.ws.sampleChart';
 }]);
