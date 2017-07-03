@@ -18,8 +18,4 @@ angular.module("trainingApp").controller("trainingAppCtrl", ["$scope", "$log", "
                     })
             }
         });
-
-        // Sample Chart
-		$scope.sampleChart = abaContext.getScriptLink() + 'de.abas.training.TrainingApp.ws.sampleChart';
-		$scope.dataChart = abaContext.getScriptLink() + 'de.abas.training.TrainingApp.ws.dataChart';
 }]);
